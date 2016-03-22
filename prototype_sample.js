@@ -16,9 +16,13 @@
    }
  }
 
- Reptile.prototype.skin = "Scales";
+var skin = prompt("What is the body covering of a reptile?");
+
+ Reptile.prototype.skin = skin;
  Reptile.prototype.bodyTemp = "Cold";
 
  Reptile.prototype.getBodyTemperature = function(){
    return this.bodyTemp;
  }
+
+ document.write("The body temperature of a reptile is :" + Reptile.prototype.getBodyTemperature())

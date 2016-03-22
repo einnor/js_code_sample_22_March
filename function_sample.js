@@ -13,3 +13,7 @@
 function areaOfRectangle(length,width){
 	return length * width;
 }
+
+var length = prompt('Enter length: ');
+var width = prompt('Enter width: ');
+alert('Area: ' + areaOfRectangle(length,width));

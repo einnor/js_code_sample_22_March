@@ -14,10 +14,10 @@ var dog = {
     	body: "hair",
     	sound: "bark",
     	getSoundMade: function() {
-       		return sound;
-    	}
+       		return this.sound;
+    	},
      	getNumberOfLegs: function() {
-      		return legs;
+      		return this.legs;
     	}
 };
 dog.legs;		//Returns 4
@@ -45,6 +45,14 @@ function Reptile(poisonous,legs,sound) {
 		return this.poisonous;
   }
 }
-var snake = new Reptile(true,0,"hiss");
-snake.legs;				 //Returns value of property1
-snake.isPoisonous();				// Returns true
+
+
+var poisonous = prompt("Is a snake poisonous? (true or false) :");
+var legs = prompt("How many legs does a snake have? :");
+
+var snake = new Reptile(poisonous,legs,"hiss");
+
+document.write("Poisonous : " + snake.isPoisonous() + "\n\n");
+document.write("Legs : " + snake.legs + "\n\n");
+//snake.legs;				 //Returns value of property1
+//snake.isPoisonous();				// Returns true
